@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(){
+            console.log(arguments.length); //arguments 라는 베열에 다 담긴다.
+            var sum =0;
+            for(var i=0; i<arguments.length; i++){
+                sum += arguments[i];
+            }
+            console.log('sum : ' + sum);
+
+        }
+
+        function multi(n1){ //  arguments를 사용 하면 파라미터를 줘도 되고 안줘도 된다. 
+            var multi = 1;
+            for(var i=0; i<arguments.length; i++){
+                multi *= arguments[i];
+            }
+            console.log('multi : ' + multi);
+        }
+
+        sum(1,2);
+        sum(4,4,5);
+        sum(2,3,4,2,3,4,555,555);
+
+        multi(1,2,3);
+        multi(2,3,3);
+        multi(1,2,3,4,5);
+        multi(3,3,2,3,4,3,4,3);
+
+    </script>
+</body>
+</html>

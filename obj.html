@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Human(name, age){ // 생성자 함수  this키워드가 없으면 일반 함수와 같다.
+           // this ={} 생략된다.
+            this.name = name;
+            this.age = age;
+
+            this.whoAmI = function(){
+                console.log('나는 ' + this.name + '입니다. 제 나이는 ' + this.age + '살 입니다.');
+            }
+           // return this;
+        }
+
+        Human.prototype.showAge = function(){ //메서드 추가 방법 퍼포먼스가 이게 훨신 좋다.
+            console.log('My age is ' + this.age);
+        }
+
+        var h1 = new Human('홍길동',20);
+        var h2 = new Human('홍길동',20);
+        h1.height = 190; //변수 추가 가능하다.
+        console.log('hieght : ' +h1.height);
+        delete h1.height;
+        delete h2.age;
+        
+        console.log('h1["height"] :' + h1['height']);
+        console.log('hight :' + h2.height);
+        console.log('age : ' + h2.age);
+        h2.age = 30;
+        h1.showAge();
+        h2.showAge();
+        h1.whoAmI();
+        h2.whoAmI();
+    </script>
+</body>
+</html>

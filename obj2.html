@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var h1 = {
+            name : '홍길동',
+            age : 20,
+            whoAmI: function(){
+                console.log('나는' +this.name + '입니다.' + '제 나이는' + this.name + '살 입니다.')
+            }
+            
+        
+        }; //자바스크립트에서 중괄호는 객체를 뜻하고 function옆에 있는 중괄호는 스코프다.
+
+
+        var fn = function(item){
+            console.log('item :' + item);
+        }
+        fn('ddd');
+
+        h1.whoAmI();
+
+    </script>
+</body>
+</html>

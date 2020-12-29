@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if(10>0){
+        console.log('10은 0보다 크다.');
+        }
+        if(0){ // 숫자는 0 빼고 모든것이 true로 본다.
+            console.log('-2은 true입니다.');
+        }
+        var msg = '안녕'; 
+        if(msg){ //문자열은 빈칸일때 false가 뜬다. var msg ='';
+            console.log('msg :' +msg);
+        }
+
+        var arr =[];
+        if(arr) { //주소값이 있으면true로 보기 때문에 true가 나온다.
+            console.log('배열입니다.');
+            console.log(arr);
+        }
+
+        var obj = {};
+        if(obj){ // null도  false, undefined도 false.
+            console.log('객체입니다.');
+        }
+    </script>
+</body>
+</html>

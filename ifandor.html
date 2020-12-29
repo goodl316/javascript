@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function chk_1(){
+            console.log('chk_1 called'); return 1;
+        }
+
+        function chk_2(){
+            console.log('chk_2 called'); return "";
+        }
+
+        function chk_3(){
+            console.log('chk_3 called'); return {};
+        }
+        function chk_4(){
+            console.log('chk_4 called');
+        }
+
+        if(chk_1() && chk_2() && chk_3() && chk_4()){ //return 을 안해줘서undefined이다. false
+            console.log('완료!!');      
+        }
+
+        if(chk_1() || chk_2() || chk_3() || chk_4()){  // chk_1 
+            console.log('완료!!');
+        }
+
+    </script>
+</body>
+</html>

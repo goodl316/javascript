@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function noReturn(item ='haha') { //파라미터에 타입을 적으면 안됨. 그냥 이름만 적어야한다.   itme = '', ''안에 디폴트 값을 넣어 줄수 있다. 
+            console.log(item);
+        }
+        noReturn('안녕','dddd',12121212);
+        noReturn('Hello');
+        noReturn();
+
+        var item;
+        console.log(item);
+
+        function returnFn(item){
+            return item +10;
+        }
+
+        var plusTen = returnFn(20);
+        console.log('plusTen :' + plusTen); //30
+        //숫자 더하기 undefined는 NaN이 뜬다. 함수 이름은 같은걸로 선언하면 무조건 마지막껄 사용 한다. 덮어쓰기가 된다. 두개를 호출 할 수 없다.
+    </script>
+</body>
+</html>
