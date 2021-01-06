@@ -9,6 +9,7 @@
     <script>
         function makeObject() {
             var count = 0;
+
             return{
                 addCount: function() {
                     count++;
@@ -19,11 +20,14 @@
 
             }
         }
-        var obj1 = makeObject();
+        var obj1 = makeObject(0);
         var obj2 = makeObject();
         obj1.addCount();
         obj1.printCount();
         obj2.printCount();
+        
+        console.log(obj1.count);
+        
     </script>
 </body>
 </html>
